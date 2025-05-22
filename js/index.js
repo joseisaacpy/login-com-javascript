@@ -25,7 +25,7 @@ function validarUsuario() {
   // manda usuario para nova página (dashboard) após 1 seg
   setTimeout(() => {
     localStorage.setItem("nomeUsuario", inputNome.value);
-    window.location.href = "../dashboard.html";
+    window.location.href = `${window.location.origin}/login-com-javascript/dashboard.html`;
   }, 1000);
 }
 
