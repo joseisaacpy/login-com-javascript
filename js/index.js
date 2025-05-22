@@ -6,7 +6,8 @@ let inputNome = document.getElementById("login");
 let inputSenha = document.getElementById("senha");
 // formulario
 let form = document.querySelector("form");
-
+// span de mensagem
+let spanMensagem = document.querySelector("form span");
 // funcao para validar usuario
 function validarUsuario() {
   // caça o login do usuario e senha com o metodo find no array de usuarios
@@ -17,15 +18,21 @@ function validarUsuario() {
   });
   // se não encontrado, retorna mensagem
   if (!loginEncontrado) {
-    return console.log("Usuário não encontrado!");
+    return (spanMensagem.textContent = "Login ou senha incorretos.");
   }
   // se encontrado, retorna mensagem confirmando que o usuário está no 'sistema'
-  console.log("Usuário encontrado!");
+  spanMensagem.textContent = "Usuário logado com sucesso.";
+  // manda usuario para nova página (dashboard) após 1 seg
+  setTimeout(() => {
+    localStorage.setItem("nomeUsuario", inputNome.value);
+    window.location.href = "../dashboard.html";
+  }, 1000);
 }
 
 // evento de submissao do form
 form.addEventListener("submit", (e) => {
   // impede o comportamento padrao de recarregamento
   e.preventDefault();
+  // chama funcao de validar usuario
   validarUsuario();
 });
