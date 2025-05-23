@@ -1,0 +1,40 @@
+/* form */
+main form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+  border: 1px solid;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+/* inputs */
+form input {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid;
+  width: 100%;
+}
+
+/* botão de envio */
+form input[type="submit"] {
+  cursor: pointer;
+  background-color: var(--Ocean-3);
+  transition: all 0.3s ease-in-out;
+  color: #fff;
+  border: 0;
+  font-weight: 500;
+}
+
+/* botão de envio com hover */
+form input[type="submit"]:hover {
+  background-color: var(--Ocean-5);
+}
+
+/* mensagem de erro ou autenticação de login */
+form span {
+  text-align: center;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}

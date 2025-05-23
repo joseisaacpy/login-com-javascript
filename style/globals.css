@@ -1,5 +1,16 @@
+/* Color Theme Swatches in RGBA */
+:root {
+  --Ocean-1: rgba(0, 56, 63, 1);
+  --Ocean-2: rgba(0, 89, 91, 1);
+  --Ocean-3: rgba(0, 114, 105, 1);
+  --Ocean-4: rgba(0, 140, 114, 1);
+  --Ocean-5: rgba(2, 165, 117, 1);
+}
+
+/* Fonte Roboto */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
+/* Reset */
 *,
 ::after,
 ::before {
@@ -8,13 +19,15 @@
   box-sizing: border-box;
 }
 
+/* HTML */
 html {
   font-size: 16px;
 }
 
+/* Body */
 body {
   font-size: 1rem;
   font-family: "Roboto", sans-serif;
-  background-color: black;
-  color: aliceblue;
+  background-color: var(--Ocean-1);
+  color: #fff;
 }

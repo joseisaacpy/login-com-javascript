@@ -7,7 +7,7 @@ let inputSenha = document.getElementById("senha");
 // formulario
 let form = document.querySelector("form");
 // span de mensagem
-let spanMensagem = document.querySelector("form span");
+let spanMensagem = document.getElementById("mensagem");
 // funcao para validar usuario
 function validarUsuario() {
   // caça o login do usuario e senha com o metodo find no array de usuarios
@@ -18,6 +18,7 @@ function validarUsuario() {
   });
   // se não encontrado, retorna mensagem
   if (!loginEncontrado) {
+    spanMensagem.style.color='#'
     return (spanMensagem.textContent = "Login ou senha incorretos.");
   }
   // se encontrado, retorna mensagem confirmando que o usuário está no 'sistema'
