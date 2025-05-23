@@ -1,3 +1,5 @@
+// sim, "banco de dados" será esse array em js
+// é bem simples, mas será usado apenas para fins didáticos
 let usuarios = [
   {
     id: 1,
