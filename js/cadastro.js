@@ -1,5 +1,4 @@
-// importa o array de usuarios
-// import usuarios from "./usuarios.js";
+
 // banco de dados no localstorage
 let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 

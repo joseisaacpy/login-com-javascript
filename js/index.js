@@ -6,6 +6,9 @@ let inputNome = document.getElementById("login");
 // input senha
 let inputSenha = document.getElementById("senha");
 
+// modal de carragamento
+let modal = document.getElementById("modal");
+
 // formulario
 let form = document.querySelector("form");
 
@@ -30,7 +33,9 @@ function validarUsuario() {
   // se encontrado, retorna mensagem confirmando que o usuário está no 'sistema'
   spanMensagem.style.color = "#fff";
   spanMensagem.textContent = "Usuário logado com sucesso.";
-
+  
+  // coloca class de ativo no modal, para mostrar o carregamento
+  modal.classList.add("active");
   // manda usuario para nova página (dashboard) após 1 seg
   setTimeout(() => {
     localStorage.setItem("nomeUsuario", inputNome.value);
