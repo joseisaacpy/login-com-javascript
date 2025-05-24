@@ -40,7 +40,8 @@ form input[type="submit"] {
   background-color: var(--Ocean-3);
   transition: all 0.3s ease-in-out;
   color: #fff;
-  border: 0;
+
+  border: 1px solid #fff;
   font-weight: 500;
 }
 

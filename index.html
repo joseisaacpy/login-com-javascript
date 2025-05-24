@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Login</title>
     <link rel="stylesheet" href="./style/index.css" />
   </head>
   <body>
     <main>
-      <form method="get" action="#">
+      <form>
         <h1>Login</h1>
         <label for="login">Digite seu login:</label>
         <input
@@ -16,6 +16,8 @@
           name="login"
           id="login"
           placeholder="Login"
+          maxlength="10"
+          minlength="6"
           required
         />
         <label for="senha">Digite sua senha:</label>
@@ -24,6 +26,8 @@
           name="senha"
           id="senha"
           placeholder="Senha"
+          minlength="6"
+          maxlength="10"
           required
         />
         <a href="./cadastro.html">Não possui conta?</a>

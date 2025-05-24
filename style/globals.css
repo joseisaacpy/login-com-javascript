@@ -28,6 +28,6 @@ html {
 body {
   font-size: 1rem;
   font-family: "Roboto", sans-serif;
-  background-color: var(--Ocean-1);
+  background: linear-gradient(to right, var(--Ocean-1), var(--Ocean-4));
   color: #fff;
 }
