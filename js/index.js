@@ -13,7 +13,7 @@ let modal = document.getElementById("modal");
 let form = document.querySelector("form");
 
 // span de mensagem
-let spanMensagem = document.getElementById("mensagem");
+let mensagemLogin = document.getElementById("mensagemLogin");
 
 // funcao para validar usuario
 function validarUsuario() {
@@ -27,13 +27,15 @@ function validarUsuario() {
 
   // se não encontrado, retorna mensagem
   if (!loginEncontrado) {
-    return (spanMensagem.textContent = "Login ou senha incorretos.");
+    mensagemLogin.style.display = "block";
+    mensagemLogin.textContent = "Login ou senha incorretos.";
+    return;
   }
 
   // se encontrado, retorna mensagem confirmando que o usuário está no 'sistema'
-  spanMensagem.style.color = "#fff";
-  spanMensagem.textContent = "Usuário logado com sucesso.";
-  
+  mensagemLogin.style.display = "block";
+  mensagemLogin.textContent = "Usuário logado com sucesso.";
+
   // coloca class de ativo no modal, para mostrar o carregamento
   modal.classList.add("active");
   // manda usuario para nova página (dashboard) após 1 seg
@@ -50,4 +52,3 @@ form.addEventListener("submit", (e) => {
   // chama funcao de validar usuario
   validarUsuario();
 });
-console.log(usuarios);

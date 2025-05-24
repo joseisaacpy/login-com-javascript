@@ -61,3 +61,21 @@ main a {
   text-align: left;
   color: #fff;
 }
+
+/* mensagem do form */
+.mensagem {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  display: none;
+}
+
+.mensagem.erro {
+  color: red;
+  display: block;
+}
+
+.mensagem.sucesso {
+  display: block;
+  color: green;
+}
